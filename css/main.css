@@ -1,0 +1,61 @@
+.brand-logo {
+  margin-left: 15px;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+.small-side {
+  border: 2px solid red;
+  margin-top: 10px;
+  margin: 30px;
+}
+
+.big-side {
+  border: 2px solid red;
+  align-items: center;
+  margin-top: 22px;
+  margin-bottom: 15px;
+}
+
+.recent-news {
+  text-align: center;
+}
+
+
+/* .card {
+  width: 500px;
+  display: block;
+  flex-wrap: wrap;
+  float: left;
+  margin: 50px 0px 25px 137px;
+  
+}
+
+.card-reveal p {
+  font-size: 20px;
+} */
+
+.row {
+  background-color: rgb(231, 197, 197);
+}
+
+h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.about-us {
+  background-color: rgb(231, 197, 197);
+}
+
+.about-us p {
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  font-size: 20px;
+}
+
