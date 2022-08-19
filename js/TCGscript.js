@@ -31,7 +31,7 @@ function renderCard(card) {
         var pokeInnerHTML = `
             <div class="pokeImage"><img src=${urlImage}/></div>
             <button class="collected btn" id="haveButton${i}">Have</button>
-            <button class="wishlist btn" id"wantButton${i}">Want</button>
+            <button class="wishlist btn" id="wantButton${i}">Want</button>
         `;
         console.log(pokeInnerHTML);
         pokemonEl.innerHTML = pokeInnerHTML;
@@ -52,9 +52,20 @@ $(document).on('click', HaveBtnEl, function(event) {
     console.log(cardImage);
     var cardEl = cardImage.parentNode.children[0].children[0].getAttribute("src")
     console.log(cardEl)
-    // var imgEl = $(this).siblings('.pokeImage img');
-    // var imgEl = (this.querySelector(".pokeImage img"));
     console.log(imgEl)
-    // var imgEl = document.getElementsByClassName("pokeImage");
+    localStorage.setItem(imgEl, JSON.stringify(cardEl));    
+})
+
+var CollectedBtnEl = $(".wishlist");
+
+$(document).on('click', CollectedBtnEl, function(event) {
+    // event.preventDefault();
+    console.log(event)
+    var imgEl = event.target.id
+    var cardImage = document.getElementById(imgEl);
+    console.log(cardImage);
+    var cardEl = cardImage.parentNode.children[0].children[0].getAttribute("src")
+    console.log(cardEl)
+    console.log(imgEl)
     localStorage.setItem(imgEl, JSON.stringify(cardEl));    
 })
