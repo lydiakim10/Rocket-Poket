@@ -34,7 +34,7 @@ function renderPokemon(pokeData){
   cardContainer.classList.add('game-card', 'card')
 
   const images = {
-    red: './images/0_Pokemon_Red.webp',
+    red: 'https://imgur.com/8gVcbnS.png',
     blue: './images/1_Pokemon_Blue.webp',
     yellow: './images/2_Pokemon_Yellow.webp',
     gold: './images/3_Pokemon_Gold.webp',
@@ -76,6 +76,7 @@ function renderPokemon(pokeData){
   }
   var createImg = document.createElement('img')
   createImg.setAttribute('src', images[pokeDataName])
+  createImg.setAttribute('referrerpolicy', 'no-referrer')
   createImg.classList.add('gameImage')
   pokeContainer.append(createImg)
 
@@ -127,32 +128,27 @@ $('.want').each(function() {
 }
 
 var HaveBtn = $('.have');
-
-$(document).on('click', HaveBtn, function(event) {
-    console.log(event)
-    var btnEl = event.target.id
-    var card = document.getElementById(btnEl);
-    console.log(card);
-    var cardEl = card.parentNode.previousSibling.children[0].getAttribute('src')
-    console.log(cardEl)
-    console.log(btnEl)
-    localStorage.setItem(btnEl, JSON.stringify(cardEl));    
-    localStorage.setItem(btnEl, JSON.stringify(cardEl));
-    if (cardEl in localStorage) {
-      console.log('yes')
-  } else {
-      console.log('no')
-  }}   
-)
-
-var CollectedBtn = $(".want");
-
 $(document).on('click', HaveBtn, function(event) {
   console.log(event)
   var btnEl = event.target.id
   var card = document.getElementById(btnEl);
   console.log(card);
-  var cardEl = card.parentNode.children[0]
+  var cardEl = card.parentNode.previousSibling.children[0].getAttribute('src')
+  console.log(cardEl)
+  console.log(btnEl)
+  localStorage.setItem(btnEl, JSON.stringify(cardEl));    
+  }    
+)
+
+
+var wantBtn = $(".want");
+
+$(document).on('click', wantBtn, function(event) {
+  console.log(event)
+  var btnEl = event.target.id
+  var card = document.getElementById(btnEl);
+  console.log(card);
+  var cardEl = card.parentNode.previousSibling.children[0].getAttribute('src')
   console.log(cardEl)
   console.log(btnEl)
   localStorage.setItem(btnEl, JSON.stringify(cardEl));    
