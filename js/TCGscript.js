@@ -32,10 +32,6 @@ function renderCard(card) {
 var HaveBtnEl = $('.collected');
 
 $(document).on('click', HaveBtnEl, function(event) {
-    // event.preventDefault();
-    if (event.target.matches('a')) {
-        event.preventDefault();
-    } else {
     console.log(event)
     var imgEl = event.target.id
     var cardImage = document.getElementById(imgEl);
@@ -46,15 +42,11 @@ $(document).on('click', HaveBtnEl, function(event) {
     localStorage.setItem(imgEl, JSON.stringify(cardEl));    
     localStorage.setItem(imgEl, JSON.stringify(cardEl));
     }    
-})
+)
 
 var CollectedBtnEl = $(".wishlist");
 
 $(document).on('click', CollectedBtnEl, function(event) {
-    // event.preventDefault();
-    if (event.target.matches('a')) {
-        event.preventDefault();
-    } else {
     console.log(event)
     var imgEl = event.target.id
     var cardImage = document.getElementById(imgEl);
@@ -64,4 +56,4 @@ $(document).on('click', CollectedBtnEl, function(event) {
     console.log(imgEl)
     localStorage.setItem(imgEl, JSON.stringify(cardEl));  
     }  
-})
+)
