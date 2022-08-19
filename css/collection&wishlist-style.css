@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(147, 163, 231);
+}
+.nav-wrapper {
+    background-color: rgb(230, 99, 99);
+}
+
+.brand-logo {
+    margin-left: 15px;
+}
+
+.nav-wrapper .btn {
+    background-color: rgb(71, 117, 243);
+}
+
+h4 {
+    text-decoration: underline;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+
+
+main {
+    border: 4px ridge red;
+    margin: 10px;
+    padding: 20px;
+    background-color: grey;
+}
+
+
+.recent-news {
+    text-align: center;
+}
+
+.all-cards {
+    display:flex;
+}
+
+main .card {
+    width: 20%;
+    display:flex;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 5px 5px rgb(93, 114, 235);
+}
+
+.card-reveal p {
+    font-size: 20px;
+}
+
+.all-videos {
+    display: flex;
+}
+
+.videos {
+    display: block;
+    flex-wrap: wrap;
+    margin-left: 240px;
+}
+
+.row {
+    display: flex; 
+    background-color: rgb(231, 197, 197);
+}
+
+.left-column {
+    float: left; 
+    width: 50%;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(231, 197, 197);
+}
+
+.right-column {
+    float: right; 
+    width: 50%;
+    font-size: 30px;
+    text-align: center; 
+    background-color: rgb(231, 197, 197);
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.bottom-section {
+    margin: 10px;
+    border: 4px groove red;
+    padding: 20px;
+}
+
+.bottom-section img {
+    width: 500px;
+    margin: 150px 0px 0px 125px;
+}
+
+.about-us {
+    background-color: rgb(231, 197, 197);
+    border: 5px double rgb(93, 114, 235);
+    margin: 15px;
+}
+
+.about-us p {
+    text-align: center;
+    font-size: 17px;
+    margin: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.footer {
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
+

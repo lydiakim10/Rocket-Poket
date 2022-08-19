@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="css/TCG.css">
+    <link rel="stylesheet" href="./css/collection&wishlist-style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Rocket Pokét</title>
   </head>
@@ -24,27 +24,28 @@
       </div>
     </nav>
 
-  <main class="main-page">
-      <div id="container"></div>
+    <main class="main-page">
+    <div id="row"> 
+        <h1 class="left-column"> Your Collection </h1> 
+            <div id="collected"> 
+                <!-- placeholders of when user has selected a card/video game they have  -->   
+            </div>
+        <h1 class="right-column"> Your Wishlist </h1>
+            <div id="wishlist">
+                <!-- placeholders of when user has selected a card/video game they want   -->
+            </div>
+    </div>
+</main>
 
-
-
-
-
-
-
-  </main>
-
+    <footer class="footer">
+      <h2>Made with ❤️️ by Team Rocket</h2>
+      <p>
+          &copy; 2022 Team Rocket, Inc.
+      </p>
+  </footer>
   
-  <footer class="footer">
-    <h2>Made with ❤️️ by Team Rocket</h2>
-    <p>
-        &copy; 2022 Team Rocket, Inc.
-    </p>
-</footer>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/TCGscript.js"></script>
-  </body>
-</html>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="./js/collection&wishlist-js.js"></script>
+    </body>
+  </html>  
