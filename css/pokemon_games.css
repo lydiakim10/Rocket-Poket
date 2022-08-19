@@ -1,0 +1,55 @@
+
+
+h4 {
+  text-decoration: none;
+}
+#poke-container {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+.game-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+.card {
+  width: 270px;
+}
+.game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.gameTitle {
+  text-transform: capitalize;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 7px;
+}
+.gameImage {
+  width: 200px;
+}
+button {
+  margin: 2px 6px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  #poke-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  #poke-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
