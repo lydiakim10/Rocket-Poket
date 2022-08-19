@@ -2,12 +2,6 @@ var containerEl = document.getElementById('container');
 var url = `https://api.pokemontcg.io/v2/cards?pageSize=50`;
 
 
-// var getCard = async () => {
-//     for (var i = 1; i <= 50; i++) {
-//         await findCard(i);
-//     }
-// }
-
 // fetch method using "async" and "await"
 var findCard = async id => {
     
@@ -16,7 +10,6 @@ var findCard = async id => {
     // console.log(card);
     renderCard(card);
 }
-
 
 findCard();
 
@@ -29,9 +22,11 @@ function renderCard(card) {
         // console.log(urlImage);
        
         var pokeInnerHTML = `
-            <div class="pokeImage"><img src=${urlImage}/></div>
-            <button class="collected btn">Have</button>
-            <button class="wishlist btn">Want</button>
+            <div class="cardBox">
+                <div class="pokeImage"><img src=${urlImage}></div>
+                <button class="collected btn">Have</button>
+                <button class="wishlist btn">Want</button>
+            </div>    
         `;
         // console.log(pokeInnerHTML);
         pokemonEl.innerHTML = pokeInnerHTML;
@@ -41,14 +36,15 @@ function renderCard(card) {
 }
 
 
+
 var HaveBtnEl = $('.collected');
 
-HaveBtnEl.click(function(event) {
-    event.preventDefault();
+$(document).on('click', HaveBtnEl, function(event) {
+    // event.preventDefault();
 
     var imgEl = $(this).siblings('src').val();
     console.log(imgEl);
-    localStorage.setItem(Have, JSON.stringify(imgEl));
+    localStorage.setItem('Have', JSON.stringify(imgEl));    
 })
 
 
