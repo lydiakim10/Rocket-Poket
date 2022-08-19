@@ -29,7 +29,9 @@ function renderPokemon(pokeData){
   var pokeContainer = document.createElement("div")
   // var gameLink = document.createElement('a')
   // gameLink.classList.add('gameLink')
-  pokeContainer.classList.add('game', 'card',)
+  pokeContainer.classList.add('game')
+  var cardContainer = document.createElement('div')
+  cardContainer.classList.add('game-card', 'card')
   //  gamesImage(pokeContainer);
 
   // gameLink.href = '#'
@@ -97,8 +99,9 @@ $('.game').each(function() {
 });
  
   pokeContainer.append(pokeName);
-  // gameLink.append(pokeContainer)   
-  allPokemonContainer.appendChild(pokeContainer);
+  // gameLink.append(pokeContainer)
+  cardContainer.append(pokeContainer)   
+  allPokemonContainer.appendChild(cardContainer);
 
   var buttonDiv = document.createElement('div')
 
@@ -111,82 +114,46 @@ $('.game').each(function() {
 
   buttonDiv.append(haveBtn);
   buttonDiv.append(wantBtn);
-  pokeContainer.append(buttonDiv);
+  cardContainer.append(buttonDiv);
 }
 
-// function gamesImage(containerDiv) {
-//   const images = [{
-//     src: './images/0_Pokemon_Red.webp'
-//   }, {
-//     src: './images/1_Pokemon_Blue.webp'
-//   }, {
-//     src: './images/2_Pokemon_Yellow.webp'
-//   }, {
-//     src: './images/3_Pokemon_Gold.webp'
-//   }, {
-//     src: './images/4_Pokemon_Silver.webp'
-//   }, {
-//     src: './images/5_Pokemon_Crystal.webp'
-//   }]
-//   var pokeImgContainer = document.createElement('div')
-//   pokeImgContainer.classList.add('image')
-  
-//   document.querySelectorAll('.image').forEach((pokeImgContainer, index) => {
-//     var imageEl = document.createElement('img');
-//     imageEl.setAttribute('src', images[index].src);
-//     pokeImgContainer.appendChild(imageEl);
-//     console.log(index);
-//   })  
-//   containerDiv.appendChild(pokeImgContainer);
- 
-// }
+// var HaveBtnEl = $('.have');
 
-// function gamesImage(containerDiv) {
-//   const images = [{
-//         item: './images/0_Pokemon_Red.webp'
-//       }, {
-//         item: './images/1_Pokemon_Blue.webp'
-//       }, {
-//         item: './images/2_Pokemon_Yellow.webp'
-//       }]
-//       // There will be more src imgs here. I haven't added them yet.
-  
-//   for (var i = 0; i < images.length; i++){
-//     var pokeImgContainer = document.createElement('div')
-//     pokeImgContainer.classList.add('image')
-//     var imageEl = document.createElement('img');
-//     imageEl.setAttribute("src", images[i].item);
-//     pokeImgContainer.appendChild(imageEl);
-//     containerDiv.append(pokeImgContainer);
-//   }
-// }
+// $(document).on('click', HaveBtnEl, function(event) {
+//     console.log(event)
+//     var imgEl = event.target.id
+//     var cardImage = document.getElementById(imgEl);
+//     console.log(cardImage);
+//     var cardEl = cardImage.parentNode.children[0].children[0].getAttribute("src")
+//     console.log(cardEl)
+//     console.log(imgEl)
+//     localStorage.setItem(imgEl, JSON.stringify(cardEl));    
+//     localStorage.setItem(imgEl, JSON.stringify(cardEl));
+//     }    
+// )
 
-// function gamesImage(containerDiv){
-//   let pokeImgContainer = document.createElement('div')
-//   pokeImgContainer.classList.add('image')
+// var CollectedBtnEl = $(".wishlist");
 
-//   let pokeImage = document.createElement('img')
-//   pokeImage.srcset = `./images/0_Pokemon_Red.webp`
-
-//   pokeImgContainer.append(pokeImage);
-//   containerDiv.append(pokeImgContainer);
-// }
+// $(document).on('click', CollectedBtnEl, function(event) {
+//     console.log(event)
+//     var imgEl = event.target.id
+//     var cardImage = document.getElementById(imgEl);
+//     console.log(cardImage);
+//     var cardEl = cardImage.parentNode.children[0].children[0].getAttribute("src")
+//     console.log(cardEl)
+//     console.log(imgEl)
+//     localStorage.setItem(imgEl, JSON.stringify(cardEl));  
+//     }  
+// )
 
 
-  // if (images.length > 0) {
-  //   var createImgTag = document.createElement('img');
-  //   createImgTag.setAttribute("src", images[0].src);
-  //   pokeImgContainer.appendChild(createImgTag);
-  //   containerDiv.append(pokeImgContainer);
-  // }
+  // var haveBtn = $('.have');
 
-  var haveBtn = $('.have');
-
-  $(document).on('click', haveBtn, function(event) {
-    if (e.target.matches('a')) {
-       event.preventDefault();
-    }
-    var cardEl = $(this).siblings('div').val();
-    console.log(cardEl);
-    localStorage.setItem('Have', JSON.stringify(cardEl));
-  })
+  // $(document).on('click', haveBtn, function(event) {
+  //   if (e.target.matches('a')) {
+  //      event.preventDefault();
+  //   }
+  //   var cardEl = $(this).siblings('div').val();
+  //   console.log(cardEl);
+  //   localStorage.setItem('Have', JSON.stringify(cardEl));
+  // })
