@@ -18,13 +18,13 @@ var url = version.url
   })
   .then(function(pokeData){
     renderPokemon(pokeData)
-    console.log(pokeData)
+    // console.log(pokeData)
   })
 
 }
 function renderPokemon(pokeData){
   var pokeDataName = pokeData.name
-  console.log(pokeDataName)
+  // console.log(pokeDataName)
   var allPokemonContainer = document.getElementById('poke-container');
   var pokeContainer = document.createElement("div")
   // var gameLink = document.createElement('a')
@@ -32,9 +32,6 @@ function renderPokemon(pokeData){
   pokeContainer.classList.add('game')
   var cardContainer = document.createElement('div')
   cardContainer.classList.add('game-card', 'card')
-  //  gamesImage(pokeContainer);
-
-  // gameLink.href = '#'
 
   const images = {
     red: './images/0_Pokemon_Red.webp',
@@ -99,7 +96,6 @@ $('.game').each(function() {
 });
  
   pokeContainer.append(pokeName);
-  // gameLink.append(pokeContainer)
   cardContainer.append(pokeContainer)   
   allPokemonContainer.appendChild(cardContainer);
 
@@ -112,48 +108,54 @@ $('.game').each(function() {
   wantBtn.classList.add('want', 'btn')
   wantBtn.innerText = 'Want'
 
+  var i = 0;
+$('.have').each(function() {
+  var customID = 'have' + String(i)
+  $(this).attr('id', customID)
+  i++;
+});
+var i = 0;
+$('.want').each(function() {
+  var customID = 'want' + String(i)
+  $(this).attr('id', customID)
+  i++;
+});
+
   buttonDiv.append(haveBtn);
   buttonDiv.append(wantBtn);
   cardContainer.append(buttonDiv);
 }
 
-// var HaveBtnEl = $('.have');
+var HaveBtn = $('.have');
 
-// $(document).on('click', HaveBtnEl, function(event) {
-//     console.log(event)
-//     var imgEl = event.target.id
-//     var cardImage = document.getElementById(imgEl);
-//     console.log(cardImage);
-//     var cardEl = cardImage.parentNode.children[0].children[0].getAttribute("src")
-//     console.log(cardEl)
-//     console.log(imgEl)
-//     localStorage.setItem(imgEl, JSON.stringify(cardEl));    
-//     localStorage.setItem(imgEl, JSON.stringify(cardEl));
-//     }    
-// )
+$(document).on('click', HaveBtn, function(event) {
+    console.log(event)
+    var btnEl = event.target.id
+    var card = document.getElementById(btnEl);
+    console.log(card);
+    var cardEl = card.parentNode.previousSibling.children[0].getAttribute('src')
+    console.log(cardEl)
+    console.log(btnEl)
+    localStorage.setItem(btnEl, JSON.stringify(cardEl));    
+    localStorage.setItem(btnEl, JSON.stringify(cardEl));
+    if (cardEl in localStorage) {
+      console.log('yes')
+  } else {
+      console.log('no')
+  }}   
+)
 
-// var CollectedBtnEl = $(".wishlist");
+var CollectedBtn = $(".want");
 
-// $(document).on('click', CollectedBtnEl, function(event) {
-//     console.log(event)
-//     var imgEl = event.target.id
-//     var cardImage = document.getElementById(imgEl);
-//     console.log(cardImage);
-//     var cardEl = cardImage.parentNode.children[0].children[0].getAttribute("src")
-//     console.log(cardEl)
-//     console.log(imgEl)
-//     localStorage.setItem(imgEl, JSON.stringify(cardEl));  
-//     }  
-// )
-
-
-  // var haveBtn = $('.have');
-
-  // $(document).on('click', haveBtn, function(event) {
-  //   if (e.target.matches('a')) {
-  //      event.preventDefault();
-  //   }
-  //   var cardEl = $(this).siblings('div').val();
-  //   console.log(cardEl);
-  //   localStorage.setItem('Have', JSON.stringify(cardEl));
-  // })
+$(document).on('click', HaveBtn, function(event) {
+  console.log(event)
+  var btnEl = event.target.id
+  var card = document.getElementById(btnEl);
+  console.log(card);
+  var cardEl = card.parentNode.children[0]
+  console.log(cardEl)
+  console.log(btnEl)
+  localStorage.setItem(btnEl, JSON.stringify(cardEl));    
+  localStorage.setItem(btnEl, JSON.stringify(cardEl));
+  }    
+)
