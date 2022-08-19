@@ -2,21 +2,14 @@ var containerEl = document.getElementById('container');
 var url = `https://api.pokemontcg.io/v2/cards?pageSize=50`;
 
 
-// var getCard = async () => {
-//     for (var i = 1; i <= 50; i++) {
-//         await findCard(i);
-//     }
-// }
-
 // fetch method using "async" and "await"
 var findCard = async id => {
     
     var response = await fetch(url);
     var card = await response.json();
-    console.log(card);
+    // console.log(card);
     renderCard(card);
 }
-
 
 findCard();
 
@@ -26,22 +19,50 @@ function renderCard(card) {
         var pokemonEl = document.createElement('div');
         pokemonEl.classList.add('pokemonCard');
         const urlImage = card.data[i].images.small
+<<<<<<< HEAD
+        // console.log(urlImage);
+       
+        var pokeInnerHTML = `
+            <div class="cardBox">
+                <div class="pokeImage"><img src=${urlImage}></div>
+                <button class="collected btn">Have</button>
+                <button class="wishlist btn">Want</button>
+            </div>    
+=======
         console.log(urlImage);
        
         var pokeInnerHTML = `
             <div class="pokeImage"><img src=${urlImage}/></div>
             <button class="collected btn" id="haveButton${i}">Have</button>
             <button class="wishlist btn" id="wantButton${i}">Want</button>
+>>>>>>> 560b4a9c6a89d2383be1503d8df71b7b8975bfc8
         `;
-        console.log(pokeInnerHTML);
+        // console.log(pokeInnerHTML);
         pokemonEl.innerHTML = pokeInnerHTML;
-        console.log(pokemonEl);
+        // console.log(pokemonEl);
         containerEl.appendChild(pokemonEl);
+<<<<<<< HEAD
+=======
         console.log(containerEl)
+>>>>>>> 560b4a9c6a89d2383be1503d8df71b7b8975bfc8
     }
 }
 
 
+<<<<<<< HEAD
+
+var HaveBtnEl = $('.collected');
+
+$(document).on('click', HaveBtnEl, function(event) {
+    // event.preventDefault();
+
+    var imgEl = $(this).siblings('src').val();
+    console.log(imgEl);
+    localStorage.setItem('Have', JSON.stringify(imgEl));    
+})
+
+
+=======
 var HaveBtnEl = $('.collected');
 
 $(document).on('click', HaveBtnEl, function(event) {
@@ -75,3 +96,4 @@ $(document).on('click', CollectedBtnEl, function(event) {
     localStorage.setItem(imgEl, JSON.stringify(cardEl));
     }    
 })
+>>>>>>> 560b4a9c6a89d2383be1503d8df71b7b8975bfc8
