@@ -27,14 +27,12 @@ function renderPokemon(pokeData){
   console.log(pokeDataName)
   var allPokemonContainer = document.getElementById('poke-container');
   var pokeContainer = document.createElement("div")
-  var gameLink = document.createElement('a')
+  // var gameLink = document.createElement('a')
   // gameLink.classList.add('gameLink')
   pokeContainer.classList.add('game', 'card',)
   //  gamesImage(pokeContainer);
 
   // gameLink.href = '#'
-
-  
 
   const images = {
     red: './images/0_Pokemon_Red.webp',
@@ -105,10 +103,10 @@ $('.game').each(function() {
   var buttonDiv = document.createElement('div')
 
   var haveBtn = document.createElement('button')
-  haveBtn.classList.add('have')
+  haveBtn.classList.add('have', 'btn')
   haveBtn.innerText = 'Have'
   var wantBtn = document.createElement('button')
-  wantBtn.classList.add('want')
+  wantBtn.classList.add('want', 'btn')
   wantBtn.innerText = 'Want'
 
   buttonDiv.append(haveBtn);
@@ -181,3 +179,14 @@ $('.game').each(function() {
   //   pokeImgContainer.appendChild(createImgTag);
   //   containerDiv.append(pokeImgContainer);
   // }
+
+  var haveBtn = $('.have');
+
+  $(document).on('click', haveBtn, function(event) {
+    if (e.target.matches('a')) {
+       event.preventDefault();
+    }
+    var cardEl = $(this).siblings('div').val();
+    console.log(cardEl);
+    localStorage.setItem('Have', JSON.stringify(cardEl));
+  })
