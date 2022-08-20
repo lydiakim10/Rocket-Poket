@@ -1,4 +1,4 @@
-function getGame(){
+ function getGame(){
   fetch('https://pokeapi.co/api/v2/version/?limit=40')
   .then(function (response) {
     return response.json();
