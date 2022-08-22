@@ -18,17 +18,13 @@ var url = version.url
   })
   .then(function(pokeData){
     renderPokemon(pokeData)
-    // console.log(pokeData)
   })
 
 }
 function renderPokemon(pokeData){
   var pokeDataName = pokeData.name
-  // console.log(pokeDataName)
   var allPokemonContainer = document.getElementById('poke-container');
   var pokeContainer = document.createElement("div")
-  // var gameLink = document.createElement('a')
-  // gameLink.classList.add('gameLink')
   pokeContainer.classList.add('game')
   var cardContainer = document.createElement('div')
   cardContainer.classList.add('game-card')
@@ -93,7 +89,6 @@ $('.game').each(function() {
   var customID = 'game' + String(i)
   $(this).attr('id', customID)
   i++;
-  // console.log(this)
 });
  
   pokeContainer.append(pokeName);
@@ -129,13 +124,9 @@ $('.want').each(function() {
 
 var HaveBtn = $('.have');
 $(document).on('click', HaveBtn, function(event) {
-  console.log(event)
   var btnEl = event.target.id
   var card = document.getElementById(btnEl);
-  console.log(card);
   var cardEl = card.parentNode.previousSibling.children[0].getAttribute('src')
-  console.log(cardEl)
-  console.log(btnEl)
   localStorage.setItem(btnEl, JSON.stringify(cardEl));    
   }    
 )
@@ -144,13 +135,9 @@ $(document).on('click', HaveBtn, function(event) {
 var wantBtn = $(".want");
 
 $(document).on('click', wantBtn, function(event) {
-  console.log(event)
   var btnEl = event.target.id
   var card = document.getElementById(btnEl);
-  console.log(card);
   var cardEl = card.parentNode.previousSibling.children[0].getAttribute('src')
-  console.log(cardEl)
-  console.log(btnEl)
   localStorage.setItem(btnEl, JSON.stringify(cardEl));    
   localStorage.setItem(btnEl, JSON.stringify(cardEl));
   }    

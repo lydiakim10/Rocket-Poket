@@ -34,13 +34,15 @@ main {
 
 .all-cards {
     display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 main .card {
     width: 20%;
     display:flex;
     flex-wrap: wrap;
-    margin: 50px;
+    margin: 15px;
 }
 
 .card:hover {
@@ -53,12 +55,14 @@ main .card {
 
 .all-videos {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .videos {
     display: block;
     flex-wrap: wrap;
-    margin-left: 240px;
+    margin: 20px;
 }
 
 .row {
