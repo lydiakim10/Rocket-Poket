@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(147, 163, 231);
+}
+.nav-wrapper {
+    background-color: rgb(230, 99, 99);
+}
+
+.brand-logo {
+    margin-left: 15px;
+}
+
+.nav-wrapper .btn {
+    background-color: rgb(71, 117, 243);
+}
+
+.main-page{
+    display: flex;
+    background-color: rgb(231, 197, 197); 
+    justify-content: space-evenly;
+    font-size: 15px;    
+}
+
+.collected {
+    text-align: center;
+    height: 40px;
+    font-size: 30px; 
+    width: 100%;
+    background-color: rgb(231, 197, 197);    
+}
+
+.wishlist { 
+    text-align: center;
+    height: 40px;
+    font-size: 30px; 
+    width: 100%;
+    background-color: rgb(231, 197, 197); 
+}
+
+#leftside {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    width: 47%;
+    border-right: 1px solid black;
+    padding-right: 50px;
+}
+
+#rightside {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 47%; 
+    border-left: 1px solid black; 
+    padding-left: 50px; 
+}
+
+.pokemon {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.gameImage {
+    height: 200px; 
+    width: 200px; 
+    min-width: 200px; 
+    background-color: white; 
+    margin-bottom: 10px;
+}    
+
+img {
+    max-width: 95%;
+    max-height: 95%;
+}
+.about-us {
+    background-color: rgb(231, 197, 197);
+    border: 5px double rgb(93, 114, 235);
+    margin: 15px;
+}
+
+.about-us p {
+    text-align: center;
+    font-size: 17px;
+    margin: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.footer {
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
+
