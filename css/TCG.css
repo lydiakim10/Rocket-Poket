@@ -29,7 +29,7 @@ main {
 }
 
 
-.recent-news {
+/* .recent-news {
     text-align: center;
 }
 
@@ -42,17 +42,17 @@ main .card {
     display:flex;
     flex-wrap: wrap;
     margin: 50px;
-}
+} */
 
-.card:hover {
+/* .card:hover {
     box-shadow: 5px 5px 5px 5px rgb(93, 114, 235);
 }
 
 .card-reveal p {
     font-size: 20px;
-}
+} */
 
-.all-videos {
+/* .all-videos {
     display: flex;
 }
 
@@ -60,19 +60,19 @@ main .card {
     display: block;
     flex-wrap: wrap;
     margin-left: 240px;
-}
+} */
 
 .row {
     background-color: rgb(231, 197, 197);
 }
 
-h3 {
+/* h3 {
     text-align: center;
     text-decoration: underline;
     font-family:Arial, Helvetica, sans-serif
-}
+} */
 
-.bottom-section {
+/* .bottom-section {
     margin: 10px;
     border: 4px groove red;
     padding: 20px;
@@ -94,7 +94,7 @@ h3 {
     font-size: 17px;
     margin: 15px;
     font-family:Verdana, Geneva, Tahoma, sans-serif
-}
+} */
 
 .footer {
     clear: both;
