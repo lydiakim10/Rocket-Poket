@@ -31,10 +31,10 @@ function renderPokemon(pokeData){
   // gameLink.classList.add('gameLink')
   pokeContainer.classList.add('game')
   var cardContainer = document.createElement('div')
-  cardContainer.classList.add('game-card', 'card')
+  cardContainer.classList.add('game-card')
 
   const images = {
-    red: 'https://imgur.com/8gVcbnS.png',
+    red: './images/0_Pokemon_Red.png',
     blue: './images/1_Pokemon_Blue.webp',
     yellow: './images/2_Pokemon_Yellow.webp',
     gold: './images/3_Pokemon_Gold.webp',
