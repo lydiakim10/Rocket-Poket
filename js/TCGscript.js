@@ -40,7 +40,6 @@ $(document).on('click', HaveBtnEl, function(event) {
     console.log(cardEl)
     console.log(imgEl)
     localStorage.setItem(imgEl, JSON.stringify(cardEl));    
-    localStorage.setItem(imgEl, JSON.stringify(cardEl));
     }    
 )
 
