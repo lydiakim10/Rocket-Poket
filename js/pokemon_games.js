@@ -34,7 +34,7 @@ function renderPokemon(pokeData){
     blue: './images/1_Pokemon_Blue.webp',
     yellow: './images/2_Pokemon_Yellow.webp',
     gold: './images/3_Pokemon_Gold.webp',
-    silver: '/images/4_Pokemon_Silver.webp',
+    silver: './images/4_Pokemon_Silver.webp',
     crystal: './images/5_Pokemon_Crystal.webp',
     ruby: './images/6_Pokemon_Ruby.webp',
     sapphire: './images/7_Pokemon_Sapphire.webp',
