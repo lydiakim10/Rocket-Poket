@@ -1,7 +1,7 @@
-# Rocket Pocket
+# Rocket Poket
 
 ## Description
-The world of pokemon is all about collecting them all.  We made a site that helps keep track of that. Though 26 years and 8 generations of Pokemon, the things you can collect for pokemon is massive!  So where do we start? Rocket Pocket ofcourse!
+The world of pokemon is all about collecting them all.  We made a site that helps keep track of that. Though 26 years and 8 generations of Pokemon, the things you can collect for pokemon is massive!  So where do we start? Rocket Poket of course!
 
 ## Language and Technologies
 * HTML
