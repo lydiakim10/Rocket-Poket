@@ -23,6 +23,9 @@ The world of pokemon is all about collecting them all.  We made a site that help
 ## Link to Website
 https://lydiakim10.github.io/Rocket-Poket/
 
+## Presentation Slides
+https://docs.google.com/presentation/d/161BzKe4W2C1snfn59F0BgXjvSoJ1EezlpcqVZ4yLVu8/edit#slide=id.g29f43f0a72_0_5
+
 ## Screenshots
 ### Homepage
 <img src="./images/homepage.png" alt="Homepage">
